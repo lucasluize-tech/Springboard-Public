@@ -1,0 +1,5 @@
+1- mkdir learn_git_again
+2- cd learn_git_again
+3- touch third.txt
+4- git init
+5- 
