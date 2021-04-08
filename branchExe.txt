@@ -1,0 +1,23 @@
+Part I
+
+- git branch <newbranch>
+- fast forward is the simple merge with no conflicts, reursive merge you have to fix conflicts.
+- git checkout <branchname>
+- git branch -d
+- conflicts happen because changes were made on the same file in different branches.
+
+Part II
+
+- git checkout -b branchingConflict
+- "changes on index.html"
+- git add .
+- git commit -m "changes on index.html"
+- git checkout master
+- "other changes to index.html"
+- git add .
+- git commit "heading on index.html"
+- git merge branchingConflict
+- 'fixed the conflicts on index.html'
+- git add .
+- git commit -m "merge into master"
+- git status
