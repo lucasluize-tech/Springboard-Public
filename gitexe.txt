@@ -14,3 +14,5 @@
 14- git log
 15- git config --global core.pager=cat
 16- git config --global -l
+
+Making changes in the testing branch. and merging to master!
