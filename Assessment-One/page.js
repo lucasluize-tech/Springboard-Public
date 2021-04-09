@@ -1,49 +1,55 @@
-const img = document.querySelector('.url');
-const topText = document.querySelector('.top')
-const bottomText = document.querySelector('.bottom')
-const form = document.querySelector("form")
-const results = document.querySelector('.result');
+const imageSelector = document.querySelector('.url');
+const topTextSelector = document.querySelector('.top')
+const bottomTextSelector = document.querySelector('.bottom')
+const formSelector = document.querySelector("form")
+const resultSelector = document.querySelector('.result');
 
+// create a button element for deletion
 const remove = document.createElement('button')
 remove.innerHTML = "delete"
 remove.setAttribute('value', "delete")
 remove.addEventListener('click', function(e){
-    e.target.parentElement.remove()
+    this.parentElement.remove()
 })
 
-let idcount = 0;
-
+// how we create a Meme
 function makeMeme (img,top,bottom){
     const wrapper = document.createElement('div')
     wrapper.setAttribute("class", "wrapper");
-    wrapper.setAttribute("id", idcount)
-    const urlimage = document.createElement('img')
-    urlimage.setAttribute("src", img);
-    const ttop = document.createElement('div')
-    ttop.setAttribute("class", "resulttop")
-    ttop.innerText = top;
-    const tbot = document.createElement('div')
-    tbot.setAttribute("class", "resultbottom")
-    tbot.innerText = bottom; 
 
-    results.append(wrapper)
-    wrapper.append(urlimage)
-    wrapper.append(ttop)
-    wrapper.append(tbot)
+    const urlImage = document.createElement('img')
+    urlImage.setAttribute("src", img);
+
+    const textTop = document.createElement('div')
+    textTop.setAttribute("class", "resulttop")
+    textTop.innerText = top;
+
+    const textBottom = document.createElement('div')
+    textBottom.setAttribute("class", "resultbottom")
+    textBottom.innerText = bottom; 
+
+    resultSelector.append(wrapper)
+    wrapper.append(urlImage)
+    wrapper.append(textTop)
+    wrapper.append(textBottom)
     wrapper.append(remove)
-    idcount++;
-
-    urlimage.addEventListener('dblclick', function(e){
-        e.target.parentElement.remove()
+    urlImage.addEventListener('dblclick', function(e){
+        console.log(this)
+        this.parentElement.remove()
     })
 }
 
-form.addEventListener("submit", function(e){
-    e.preventDefault();
-    makeMeme(img.value, topText.value, bottomText.value);
-    img.value = "";
-    topText.value = "";
-    bottomText.value= "";
+// what happen when the user submits the inputs
+formSelector.addEventListener("submit", function(e){
+    this.preventDefault();
+    makeMeme(imageSelector.value, topTextSelector.value, bottomTextSelector.value);
+    imageSelector.value = "";
+    topTextSelector.value = "";
+    bottomTextSelector.value= "";
     
-
 })
+
+
+// More comments would help (done)
+// jsdoc
+// variables names in camelcase , and qualify the variables.(done)
