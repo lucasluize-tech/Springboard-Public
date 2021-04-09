@@ -1,0 +1,82 @@
+// DOM manipulation
+
+The browser creates a Document object model , that we can access the HTMLElements in a tree-basis sytem.
+
+ex: Document -> html -> body> h1 ...
+
+document.getElementById("id") -> retrieves only the first element of that id.
+document.getElementByTagName("h1") we can treat all the tags like indexes
+ex: const images = document.getElementByTagName("img")
+    images[0], images[1] , they will return the image like an array. BUT ITS NOT an array. ( we can't push or forEach)
+
+document.getElementByClassName("class")
+we can also filter classes that are similiar
+
+ex: document.getElementByClassName("section-title")
+HTMLColletion =>
+class="section-title.country" (3 tags) , class="section-title.state" (2 tags)
+
+if we only want the country : ("section-title country") , separated by space.
+
+// Query Selector
+
+accepts a string wich is a valid CSS selector.
+
+document.querySelector("#main") -> id main
+document.querySelector("h2.section-title") -> h2 class section-title
+document.querySelector("input") -> fist input tag
+document.querySelector("input[type="text"]")
+
+document.querySelectorAll("input") -> all input tag
+
+document.querySelectorAll("body > hr") -> only hr tags inside body.
+document.querySelectorAll(":not(p)") -> all tags that are not push
+document.querySelectorAll('h2:nth-of-type(3)) -> selects every 3 h2 tags
+
+and so on....
+
+we could also , 
+
+const button = document.querySelector("button") , and then
+    button.querySelector("nest whatever") to acess nested elements in button.
+
+// manipulating text
+
+innerText - > document.querySelector("p").innerText("Hello!")
+textContent -> shows all the text in the selector even the nested elements.
+
+// manipulating HTML
+
+innerHTML -> shows all HTML content on the selected object.
+ 
+ p.innerHTML = "<img src="url">" , a paragraph that contains an img.
+
+ // modify Styling (CSS properties)
+
+ const h1 = document.querySelector('h1')
+        h1.style.color ONLY modifies INLINE style, set into the html file.
+
+    its prefered to modify the CSS properties.
+
+// querySelector('tag').getAttribute('atribute') or setAttribute('atr', 'value')
+
+ we have access to id directly => variable.id
+ also value => variable.value
+
+// manipulating classes ( SO we can modify CSS from JS)
+
+variable = document.querySelector('tag')
+
+variable.classList = []  , an array like object with all classes from variable
+and classList has methods like .remove , .toogle(on/off)
+
+// create new HTML element
+
+ex: const newTodo = document.createElement('li')
+            newTodo.classList.add('class') --> added class for styling
+ , then we can append to a PARENT html element
+
+ ul = document.querySelector('ul')
+ ul.append(newTodo) --> created new item on unordered list.
+
+append and prepend methods accepts more than 1 argument, so we can add multiple new Elements.

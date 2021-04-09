@@ -1,0 +1,17 @@
+// localStorage
+
+Adding Objects to localStorage
+We need to add as a JSON object:
+
+localStorage.setItem("object", JSON.stringify(object))
+
+Now we parse the JSON back to JavaScript:
+
+JSON.parse(localStorage.object)
+
+JSON.stringify --> converts JavaScript Objects into JSON
+JSON.parse --> parses a string 
+
+// sessionStorage
+
+store information only while the tab is open. is not persistent.

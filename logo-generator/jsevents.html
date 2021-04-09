@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Logo Creator!</h1>
+    <form action="" id="logoform">
+        <p>
+            <label for="brandname">Brand Name: 
+                <input type="text" placeholder="brand name" name="brandname">
+            </label>
+        </p>
+        <p>
+            <label for="brandcolor">Select a color: 
+                <input type="color" name="brandcolor">
+            </label>
+        </p>
+        <p>
+            <label for="brandsize">Select font size: 
+                <input type="range" min="10" max="200" name="brandsize">
+            </label>
+        </p>
+        <input type="submit">
+        <button id="clear">Clear</button>
+    </form>
+    <section id="results">
+
+    </section>
+    <script src="jsevents.js"></script>
+</body>
+</html>
