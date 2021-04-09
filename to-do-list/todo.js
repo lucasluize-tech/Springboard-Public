@@ -47,6 +47,7 @@ form.addEventListener("submit", function(e){
     })
 
 })
+
 // I don't think this is the optimal solution but the app works.
 // local Storage solution....
 // if x = []
