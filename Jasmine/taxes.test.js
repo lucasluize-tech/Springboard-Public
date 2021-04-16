@@ -60,3 +60,9 @@ afterEach(()=>{
     usernames = [];
     console.log("afterEach!")
 })
+
+// pure function , no side effects , maintain original values.
+
+function appendArr(arr, n){
+    return [...arr, n]
+}
