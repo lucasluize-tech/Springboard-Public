@@ -1,0 +1,25 @@
+// Exercise chapter 10.2 Let and Const //
+
+ES5 Constants: 
+
+var PI = 3.14;
+PI = 42 // stop from doing this
+
+solution:
+
+const PI = 3.14;
+that way we can't change the value.
+
+Quiz:
+What is the difference between var and let?
+- var you can re-declare and reassign,
+let you can only reassign the value.
+
+What is the difference between var and const?
+- Const can't redeclare or reassign
+What is the difference between let and const?
+- let can reassign, and const can't.
+
+What is hoisting?
+- When you call a variable that still does not exist.
+
