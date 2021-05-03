@@ -86,6 +86,5 @@ const combine2 = (obj1, obj2) => {
 
 /** Return a new object with a modified key and value. */
 const update = (obj, key, val) => {
-    let k = key
     return {...obj, [key] : val};
 }
