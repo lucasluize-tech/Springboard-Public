@@ -13,25 +13,24 @@
 // Same keys and values ES2015
 
 const createInstructor = (first, last) => {
-    return {
-        first,
-        last
-    };
-}
+  return {
+    first,
+    last,
+  };
+};
 
 // Computed Property Names
 
 var favoriteNumber = 42;
-
 
 // instructor[favoriteNumber] = "That is my favorite!"
 
 // Computed Property Names ES2015
 
 let instructor = {
-    firstName: "Colt",
-    favoriteNumber
-  }
+  firstName: "Colt",
+  favoriteNumber,
+};
 
 // Object Methods
 
@@ -48,14 +47,14 @@ let instructor = {
 // Object Methods ES2015
 
 let instructor = {
-    firstName: "Colt",
-    sayHi(){
-      return "Hi!";
-    },
-    sayBye(){
-      return this.firstName + " says bye!";
-    };
-  }
+  firstName: "Colt",
+  sayHi() {
+    return "Hi!";
+  },
+  sayBye() {
+    return this.firstName + " says bye!";
+  },
+};
 
 // createAnimal function
 
@@ -66,22 +65,19 @@ let instructor = {
 //         noise: a string to be printed when above function is called (‘woof’, ‘baaa’)
 
 // Use one or more of the object enhancements we’ve covered.
-function createAnimal(species, verb, noise){
-    return {
-        species : species,
-        [verb](){
-            return noise;
-        }
-    };
+function createAnimal(species, verb, noise) {
+  return {
+    species: species,
+    [verb]() {
+      return noise;
+    },
+  };
 }
 
-
-
-const d = createAnimal("dog", "bark", "Woooof!")
+const d = createAnimal("dog", "bark", "Woooof!");
 // {species: "dog", bark: ƒ}
-d.bark()  //"Woooof!"
+d.bark(); //"Woooof!"
 
-const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
+const s = createAnimal("sheep", "bleet", "BAAAAaaaa");
 // {species: "sheep", bleet: ƒ}
-s.bleet() //"BAAAAaaaa"
-
+s.bleet(); //"BAAAAaaaa"
