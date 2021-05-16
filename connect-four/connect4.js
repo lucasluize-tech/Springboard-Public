@@ -97,7 +97,7 @@ function endGame(msg) {
 /** handleClick: handle click of column top to play piece */
 
 function handleClick(evt) {
-  // get x from ID of clicked cell
+  // get x from ID of clicked cell // + converts to intenger.
   let x = +evt.target.id;
 
   // get next spot in column (if none, ignore click)

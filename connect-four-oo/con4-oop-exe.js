@@ -66,6 +66,7 @@ class Game {
       location.reload();
     }
   }
+
   handleClick(evt) {
     const x = +evt.target.id;
 
@@ -77,9 +78,7 @@ class Game {
     this.board[y][x] = this.currPlayer;
     this.placeInTable(y, x);
 
-    // this is not working...
     if (this.checkForWin()) {
-      console.log(checkforWin());
       this.gameOver = true;
       return this.endGame(`Player with color : ${this.currPlayer.color} won!`);
     }
@@ -98,7 +97,7 @@ class Game {
           y >= 0 &&
           y < this.column &&
           x >= 0 &&
-          x < this.width &&
+          x < this.row &&
           this.board[y][x] === this.currPlayer
       );
 

@@ -14,19 +14,9 @@ body {
 
 /* pieces are div within game table cells: draw as colored circles */
 
-.piece2 {
+.piece {
   /* TODO: make into circles */
   border-radius: 50%;
-  background-color: blue;
-  margin: 5px;
-  width: 80%;
-  height: 80%;
-}
-
-.piece1 {
-  /* TODO: make into circles */
-  border-radius: 50%;
-  background-color: red;
   margin: 5px;
   width: 80%;
   height: 80%;
