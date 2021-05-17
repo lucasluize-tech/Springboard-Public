@@ -46,14 +46,13 @@ $("form").on("submit", function (e) {
   $(".title").val("");
   $(".rating").val("");
 });
-
+// sorting by rating
 $(".sort").on("click", function () {
-  console.log("clicked");
   const cardsArray = $(".card").toArray();
+  // if a-b returns > 0 , b comes before a.
   const sortedCards = cardsArray.sort((a, b) => a.id - b.id);
   $(".cards").remove();
   for (card of sortedCards) {
     $(".results").append(card);
-    // card.appendTo(".results");
   }
 });
