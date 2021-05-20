@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Form</h1>
+    <form action="/web.txt" class="form">
+        <label for="">Click to get web exercise</label>
+        <input type="submit">
+    </form>
+       <!-- if Post 405 -->
+    <form action="/logged.html" method="GET" id="user">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="submit">
+    </form>
+    <div>
+    </div>
+
+    <script>
+        document.getElementById('user').addEventListener('submit', function(e){
+            // just to check 405 error on POST
+            // e.preventDefault(); // avoiding requests 
+            const div = document.querySelector('div')
+            const p = document.createElement('p')
+            const username = document.querySelector('#username')
+            const password = document.querySelector('#password')
+            p.innerText = `You are : ${username.value} and your password is : ${password.value}`
+            div.append(p)
+            console.log('done')
+        })
+    </script>
+</body>
+</html>
