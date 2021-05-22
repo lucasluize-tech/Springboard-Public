@@ -23,18 +23,22 @@
     <div>
     </div>
 
+    <button class="getPlanets"> Show STAR WARS PLANETS!</button>
     <script>
-        document.getElementById('user').addEventListener('submit', function(e){
-            // just to check 405 error on POST
-            // e.preventDefault(); // avoiding requests 
-            const div = document.querySelector('div')
-            const p = document.createElement('p')
-            const username = document.querySelector('#username')
-            const password = document.querySelector('#password')
-            p.innerText = `You are : ${username.value} and your password is : ${password.value}`
-            div.append(p)
-            console.log('done')
-        })
-    </script>
+    //     document.getElementById('user').addEventListener('submit', function(e){
+    //         // just to check 405 error on POST
+    //         // e.preventDefault(); // avoiding requests 
+    //         const div = document.querySelector('div')
+    //         const p = document.createElement('p')
+    //         const username = document.querySelector('#username')
+    //         const password = document.querySelector('#password')
+    //         p.innerText = `You are : ${username.value} and your password is : ${password.value}`
+    //         div.append(p)
+    //         console.log('done')
+    //     })
+    // </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="axios-demo.js"></script>
 </body>
 </html>
