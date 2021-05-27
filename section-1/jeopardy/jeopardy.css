@@ -1,0 +1,33 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+
+
+table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+tbody td{
+  background-color: #115ff4;
+  color : white;
+  width:150px;
+  height: 150px;
+  text-align: center;
+}
+
+thead th{
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #115ff4;
+  color : white;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+
+}
