@@ -50,7 +50,7 @@ async function getCategoryIds() {
  * Where clue-array is:
  *   [
  *      {question: "Hamlet Author", answer: "Shakespeare", showing: null},
- *      {question: "Bell Jar Author", answer: "Plath", showing: null},
+ *      {question: "Bell Jar Author #74119c", answer: "Plath", showing: null},
  *      ...
  *   ]
  */
@@ -73,7 +73,7 @@ async function getCategory(catId) {
 
     return { title: category.title, clues}
     
-}black
+}
 
 /** Fill the HTML table#jeopardy with the categories & cells for questions.
  *

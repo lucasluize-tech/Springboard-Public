@@ -12,12 +12,16 @@
       <link rel="stylesheet" href="jeopardy.css">
 </head>
 <body>
+      <h1 class="jeopardy">Jeopardy!</h1>
+      <div class="container">
+            <button id="start">Start Game</button><br>
+            <i class="fa fa-spinner fa_custom fa-10x fa-spin" id="spinner" style="display:none"></i>
+      </div>
       <table id="table">
             <thead id="table-head"></thead>
             <tbody id="table-body"></tbody>
       </table>
-      <i class="fa fa-spinner fa-spin" id="spinner" style="display:none"></i>
-      <button id="start">Start Game</button>
+
 <script src="https://unpkg.com/jquery"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
 <script src="https://unpkg.com/lodash"></script>
