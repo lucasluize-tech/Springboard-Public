@@ -16,6 +16,12 @@ def in_range(nums, lowest, highest):
     """
 
     # YOUR CODE HERE
-
+    for i in nums:
+      if i < lowest:
+        pass
+      elif i > highest:
+        pass
+      else:
+        print(i, "fits")
 
 in_range([10, 20, 30, 40, 50], 15, 30)            
