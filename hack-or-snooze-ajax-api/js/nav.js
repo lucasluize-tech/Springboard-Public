@@ -9,7 +9,8 @@
 function navAllStories(evt) {
   console.debug("navAllStories", evt);
   hidePageComponents();
-  putStoriesOnPage();
+  putStoriesOnPage()
+  $allStoriesList.show(); // I Don't know why i have to call this a second time.
 }
 
 $body.on("click", "#nav-all", navAllStories);
@@ -34,6 +35,8 @@ function updateNavOnLogin() {
   $navLogOut.show();
   $navUserProfile.text(`${currentUser.username}`).show();
   generateUserProfile();
+  $loginForm.hide();
+  $signupForm.hide();
 }
 
 function navNewStory(){
@@ -41,7 +44,6 @@ function navNewStory(){
   hidePageComponents();
   $newStoryForm.slideDown("slow")
   $allStoriesList.show()
-  
 }
 
 $('#nav-submit-story').on("click", navNewStory)
@@ -51,7 +53,7 @@ function navFavorites(){
   console.debug("navFavorites");
   hidePageComponents();
   putFavoritesListOnPage();
-  $favoriteStories.show();
+  $favoriteStories.show(); // also calling this twice.
 
 }
 
@@ -61,7 +63,7 @@ function navUserStories(){
   console.debug("MyStories");
   hidePageComponents();
   putUserStoriesOnPage();
-  $ownStories.show();
+  $ownStories.show(); // this too
 }
 
 $body.on('click', '#nav-my-stories', navUserStories)

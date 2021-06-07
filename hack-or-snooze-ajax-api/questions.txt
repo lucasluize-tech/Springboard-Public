@@ -1,15 +1,16 @@
 Main.js ->
 
 why we have to write $(start) to kick off the app. is it just another way of start()?
+- in Jquery that's the short hand to $(document).ready(function(){}) , waits for the DOM to load
+and executes the function.
 
 Story.js ->
 
 Li items are being created with 2 icon tags, why?
-
-for that reason when I toggleFavorite()
+-it's not sure what the problem is , but when span tags are removed, it works.
 
 -> there's a small bug on their code , that if you are not logged in , the app will load
 stories without the star which is fine, but after creating a new user or login in,
 the storylist still wont have star. 
 
-To fix it, we will empty the list and get a new list.
+To fix it, we will empty the list and get a new list after the user logs in/ create acc.

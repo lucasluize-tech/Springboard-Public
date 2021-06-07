@@ -26,7 +26,7 @@ function generateStoryMarkup(story, deleteButton = false) {
   const showStar = Boolean(currentUser)
   return $(`
       <li id="${story.storyId}">
-          ${deleteButton ? getDeleteButtonHTML() : ""}
+          ${deleteButton ? `<i class="fas fa-trash-alt trash-can"></i>` : ""}
           ${showStar ? starHTML(currentUser, story) : ""}
         <a href="${story.url}" target="a_blank" class="story-link">
           ${story.title}
@@ -38,18 +38,12 @@ function generateStoryMarkup(story, deleteButton = false) {
     `);
 }
 
-function  getDeleteButtonHTML(){
-  return `<span class="trash-can">
-              <i class="fas fa-trash-alt"></i>
-          </span>`;
-}
 
 function starHTML(user, story){
   const favorite = user.isFavorite(story);
   const star = favorite ? "fas" : "far";
-  return `<span class="star">
-              <i class="${star} fa-star"</i>
-          </span>`;
+  return `<i class="${star} fa-star star"</i>
+          `;
 }
 
 /** Gets list of stories from server, generates their HTML, and puts on page. */
