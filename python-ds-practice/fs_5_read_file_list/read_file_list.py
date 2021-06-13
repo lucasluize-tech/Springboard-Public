@@ -26,4 +26,4 @@ def read_file_list(filename):
         for line in file:
             print("- "+line.strip())
 
-read_file_list("dogs")
+read_file_list("dogs") 
