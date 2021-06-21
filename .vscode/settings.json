@@ -2,5 +2,6 @@
     "cSpell.ignoreWords": [
         "tbot",
         "ttop"
-    ]
+    ],
+    "python.pythonPath": "flask-intro-demo/venv/bin/python3.9"
 }
