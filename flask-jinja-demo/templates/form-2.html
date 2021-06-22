@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block page%}
+  <h1>Madlibs</h1>
+{% endblock %}
+{% block content %}
+  <form action="/story">
+    <label for="place">Place:
+      <input type="text" name="place">
+    </label><br>
+    <label for="noun">Noun:
+      <input type="text" name="noun">
+    </label><br>
+    <label for="verb">Verb:
+      <input type="text" name="verb">
+    </label><br>
+    <label for="adjective">Adjective:
+      <input type="text" name="adjective">
+    </label><br>
+    <label for="plural_noun">Plural Noun:
+      <input type="text" name="plural_noun">
+    </label><br>
+    <label for="stories"> Choose a story:</label>
+    <select name="stories" id="stories">
+      <option value="story1">story1</option>
+      <option value="story2">story2</option>
+    </select>
+    <button>Create Story</button>
+  </form>
+{% endblock %}
+
