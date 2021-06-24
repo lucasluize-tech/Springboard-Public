@@ -40,7 +40,7 @@ def show_question(id):
 def post_awnser():
     answer = request.form.get('answer')
     RESPONSES.append(answer)
-
+ 
     # if all the questions have been answered show thank you page.
 
     if len(RESPONSES) >= len(satisfaction_survey.questions):
