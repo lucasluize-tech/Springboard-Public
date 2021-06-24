@@ -1,3 +1,5 @@
 flask/
 .DS_store
 flask-jinja-demo/venv/
+flask-survey/venv/
+flask-survey/__pycache__
