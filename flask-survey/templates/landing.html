@@ -7,8 +7,8 @@
 {% block content %}
 <p>{{instructions}}</p>
 
-<button id='link'>
-    <a href="/questions/0">Start Survey</a>
-</button>
+<form action="/start" method="post">
+    <button>Start Survey!</button>
+</form>
 
 {% endblock %}

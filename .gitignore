@@ -3,3 +3,5 @@ flask/
 flask-jinja-demo/venv/
 flask-survey/venv/
 flask-survey/__pycache__
+flask-sessions/venv/
+

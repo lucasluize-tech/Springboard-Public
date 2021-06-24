@@ -7,26 +7,29 @@ app.config['SECRET_KEY'] = 'something-secret'
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 debug = DebugToolbarExtension(app)
 
-
-RESPONSES = []
-
 @app.route('/')
-def show_landing():
+def landing():
     title = satisfaction_survey.title
     instructions = satisfaction_survey.instructions
 
     return render_template('landing.html', title = title,
     instructions = instructions)
 
+@app.route('/start', methods=["POST"])
+def start_session():
+    session['answers'] = []
+    return redirect('/questions/0')
 
 @app.route('/questions/<int:id>')
 def show_question(id):
+    #retrieve responses stored on sessions
+    responses = session["answers"]
     # if user already responded all questions:
-    if len(RESPONSES) == len(satisfaction_survey.questions):
+    if len(responses) == len(satisfaction_survey.questions):
         return redirect('/thankyou')
 
     # Protecting users from jumping questions manually.
-    if len(RESPONSES) != id:
+    if len(responses) != id:
         flash(f'Invalid question id: {id}')
         return redirect(f'/questions/{len(RESPONSES)}')
 
@@ -38,14 +41,18 @@ def show_question(id):
 
 @app.route('/answer', methods =["POST"])
 def post_awnser():
+    # adding to list with sessions
     answer = request.form.get('answer')
-    RESPONSES.append(answer)
+    responses = session['answers']
+    responses.append(answer)
+    session['answers'] = responses
+    
  
     # if all the questions have been answered show thank you page.
 
-    if len(RESPONSES) >= len(satisfaction_survey.questions):
+    if len(responses) >= len(satisfaction_survey.questions):
         return redirect('/thankyou')
-    return redirect(f'/questions/{len(RESPONSES)}') # how to make this route dynamic
+    return redirect(f'/questions/{len(responses)}') # how to make this route dynamic
 
 @app.route('/thankyou')
 def thankyou_page():
