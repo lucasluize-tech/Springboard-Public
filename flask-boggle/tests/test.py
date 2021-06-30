@@ -26,12 +26,12 @@ class FlaskTests(TestCase):
 
         with self.client as client:
             with client.session_transaction() as sess:
-                sess['board'] = [["C", "A", "T", "T", "T"], 
-                                 ["C", "A", "T", "T", "T"], 
-                                 ["C", "A", "T", "T", "T"], 
-                                 ["C", "A", "T", "T", "T"], 
-                                 ["C", "A", "T", "T", "T"]]
-        response = self.client.get('/check-word?word=cat')
+                sess['board'] = [["D", "O", "G", "G", "G"], 
+                                 ["D", "O", "G", "G", "G"], 
+                                 ["D", "O", "G", "G", "G"], 
+                                 ["D", "O", "G", "G", "G"], 
+                                 ["D", "O", "G", "G", "G"]]
+        response = self.client.get('/check-word?word=dog')
         self.assertEqual(response.json['result'], 'ok')
 
     def test_invalid_word(self):
@@ -41,7 +41,7 @@ class FlaskTests(TestCase):
         self.assertEqual(response.json['result'], 'not-on-board')
 
     def non_english_word(self):
-        
+
         self.client.get('/')
         response = self.client.get(
             '/check-word?word=fsjdakfkldsfjdslkfjdlksf')
