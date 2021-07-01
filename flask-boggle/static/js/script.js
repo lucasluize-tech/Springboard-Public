@@ -1,5 +1,5 @@
 const $msg = $('.messages')
-let guessInput = $('#guess').val()
+let guessInput = $('#guess')
 const $timer = $('.timer')
 const $board = $('#boggle')
 const $score = $('.score')
@@ -7,13 +7,13 @@ const $guessList = $('#guesses')
 const $form = $('.add-guess')
 
 class BoggleGame {
-    constructor(seconds=60){
+    constructor(board,seconds=60){
         this.secs = seconds;
         this.showTimer();
         this.score = 0
         this.guessess = new Set();
         this.timer = setInterval(this.tick.bind(this), 1000)
-        $form.on("submit", this.submitGuess.bind(this))
+        $form.on("submit", this.submitGuess.bind(this))  
     }
 
     appendGuess(guess){
@@ -30,15 +30,13 @@ class BoggleGame {
 
 
     async submitGuess(e){
-        console.log(e)
         e.preventDefault()
-        let guess = guessInput
+        let guess = guessInput.val()
         if(!guess) return;
         if (this.guessess.has(guess)){
             this.showMessage(`Already guessed ${guess}`, "error")
             return
         }
-
         const res = await axios.get('/validate', {params:{guess: guess}})
 
         if(res.data.result === "not-word"){
