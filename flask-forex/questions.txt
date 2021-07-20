@@ -1,0 +1,14 @@
+## Questions
+
+1. When trying to et the result of CurrencyRates().convert() using Decimal,
+it does not work. Error 'Decimal not defined'.
+ - Solved by Importing Decimal.
+
+2. Fail to import app module when running from /tests/test.py
+ - not Solved.
+
+3. When Form is submitted , it won't take me to /result route. 404
+ - not Solved. html seems fine.
+
+
+

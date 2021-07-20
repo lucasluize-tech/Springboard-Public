@@ -7,7 +7,7 @@ const $guessList = $('#guesses')
 const $form = $('.add-guess')
 
 class BoggleGame {
-    constructor(board,seconds=60){
+    constructor(seconds=60){
         this.secs = seconds;
         this.showTimer();
         this.score = 0
