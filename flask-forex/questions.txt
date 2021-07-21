@@ -10,5 +10,4 @@ it does not work. Error 'Decimal not defined'.
 3. When Form is submitted , it won't take me to /result route. 404
  - not Solved. html seems fine.
 
-
-
+4. Flash Alert Message not showing the text inside.
