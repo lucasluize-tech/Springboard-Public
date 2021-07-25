@@ -1,12 +1,6 @@
 from forex_python.converter import CurrencyRates, CurrencyCodes, Decimal
 
-def from_is_valid(currency):
-    c = CurrencyCodes()
-    if c.get_symbol(currency):
-        return True
-    return False
-
-def to_is_valid(currency):
+def currency_is_valid(currency):
     c = CurrencyCodes()
     if c.get_symbol(currency):
         return True

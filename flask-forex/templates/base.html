@@ -13,7 +13,7 @@
     <section class='converter-app container'>
         {% with messages =  get_flashed_messages() %}
             {%if messages %}
-                {% for messsage in messages %}
+                {% for message in messages %}
                     <div class='alert alert-danger' role="alert">{{message}}</div>
                 {% endfor %}
             {% endif %}

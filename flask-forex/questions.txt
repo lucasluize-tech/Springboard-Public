@@ -5,9 +5,10 @@ it does not work. Error 'Decimal not defined'.
  - Solved by Importing Decimal.
 
 2. Fail to import app module when running from /tests/test.py
- - not Solved.
+ - it needs to be ran from main app.py folder. 'python3 -m unittest tests/test.py
 
 3. When Form is submitted , it won't take me to /result route. 404
- - not Solved. html seems fine.
+ - solved indentation error.
 
 4. Flash Alert Message not showing the text inside.
+- solved typo.

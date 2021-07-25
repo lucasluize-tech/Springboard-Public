@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, flash
 from flask import redirect
-from helper_func import from_is_valid, to_is_valid, amount_is_valid, get_result
+from helper_func import amount_is_valid, get_result, currency_is_valid
 
 app = Flask(__name__)
 
@@ -21,30 +21,33 @@ def convert_values():
     amount = request.form.get('amount')
     
     # Check for from_is_valid()
-    if not from_is_valid(convert_from):
+    if not currency_is_valid(convert_from):
         flash(f'{convert_from} NOT A VALID CURRENCY SYMBOL!')
+        
         return redirect('/')
     # Check for to_is_valid()
 
-    elif not to_is_valid(convert_to):
-        flash(f'{convert_from} NOT A VALID CURRENCY SYMBOL!')
+    elif not currency_is_valid(convert_to):
+        flash(f'{convert_to} NOT A VALID CURRENCY SYMBOL!')
+        
         return redirect('/')
 
     # Check amount_is_valid()
     elif not amount_is_valid(amount):
         flash('AMOUNT NOT A NUMBER!')
+        print('AMOUNT NOT A NUMBER!')
         return redirect('/')
 
     # Get string result with symbol + conversion
 
     result = get_result(convert_from, convert_to, amount)
+   
+    return render_template('result.html', result=result)
 
-    return redirect('/result')
+@app.route('/result')
+def showing_result():
+    """ here will render the result of the conversion """
 
-    @app.route('/result')
-    def showing_result():
-        """ here will render the result of the conversion """
+    new_amount = result
 
-        new_amount = result
-        
-        return render_template('result.html', result=new_amount)
+    return render_template('result.html', result=new_amount)
