@@ -23,3 +23,82 @@ ON o.id = v.owner_id
 GROUP BY first_name, last_name
 HAVING COUNT(owner_id) > 1 AND ROUND(AVG(price)) > 10000
 ORDER BY first_name DESC;
+
+------
+SQLZOO
+
+1.
+SELECT matchid, player FROM goal 
+  WHERE teamid LIKE 'GER'
+
+2.
+SELECT id,stadium,team1,team2
+FROM game
+JOIN goal
+ON game.id = goal.matchid
+WHERE id = 1012;
+
+3.
+SELECT player, teamid, stadium, mdate
+FROM game 
+JOIN goal 
+ON (id=matchid) 
+WHERE teamid = 'GER'
+
+4.
+SELECT team1, team2, player
+FROM game
+JOIN goal
+ON (id=matchid)
+WHERE player like 'Mario%';
+
+5.
+SELECT player, teamid, coach, gtime
+  FROM goal
+JOIN eteam
+ON (teamid = id) 
+ WHERE gtime<=10
+
+6.
+SELECT mdate, teamname
+FROM game
+JOIN eteam ON (team1 = eteam.id)
+WHERE coach like '%Fernando%';
+
+7.
+SELECT player FROM goal
+JOIN game
+ON id=matchid
+WHERE stadium like 'National Stadium, Warsaw'
+
+8.
+?
+
+9.
+SELECT teamname, count(teamid)
+  FROM eteam JOIN goal ON id=teamid
+GROUP BY teamname
+ORDER BY teamname
+
+10.
+SELECT stadium , count(matchid)
+FROM game
+JOIN goal
+ON id=matchid
+GROUP BY stadium
+
+11.
+SELECT matchid,mdate, count(teamid) 
+FROM game JOIN goal ON matchid = id 
+WHERE (team1 = 'POL' OR team2 = 'POL')
+GROUP BY matchid, mdate
+
+12.
+SELECT matchid, mdate, count(teamid)
+FROM game
+JOIN goal ON matchid = id
+WHERE teamid = 'GER'
+GROUP BY matchid, mdate
+
+13.
+?
