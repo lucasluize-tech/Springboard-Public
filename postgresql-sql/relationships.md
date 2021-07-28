@@ -56,3 +56,7 @@ RIGHT JOIN --> everything from right , but overlaping left.
 FULL JOIN --> everything from all tables
 
 _Start to write queries on the text editor , because they are going to be long !!!_
+
+
+
+
