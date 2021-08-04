@@ -58,5 +58,29 @@ FULL JOIN --> everything from all tables
 _Start to write queries on the text editor , because they are going to be long !!!_
 
 
+## Normalization   
+The organization of tables in a manner that reduces redundancy and dependecy of data,
+Dividing larger tables to smaller tables and Links them using relationships.  
+##### products  
+|id|color|price|
+|--|---------|---------|
+|1|red, green|5.00|
+|2|yellow|10.00|
 
+## Normalized  
+
+#####   color  
+|id|color|
+|--|---------|
+|1|red|
+|2|green|
+|3|yellow|
+
+
+#####   products_colors  
+|id|color_id|product_id|
+|--|---------|---------|
+|1|1|1|
+|2|2|1|
+|3|3|2|
 

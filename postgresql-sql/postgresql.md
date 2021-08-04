@@ -1,4 +1,4 @@
-# Setting up PSQL 
+# Setting up PSQL (Linux env)
 
 first install:
 ```
