@@ -10,3 +10,6 @@ flask-forex/venv/
 flask-forex/__pycache__
 flask-intro-demo/venv/
 sqlalchemy/venv/
+sqlalchemy/__pycache__
+sqlalchemy/VideoDemo/venv
+sqlalchemy/VideoDemo/__pycache__

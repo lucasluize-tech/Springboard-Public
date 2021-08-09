@@ -11,6 +11,8 @@ def connect_db(app):
 class Pet(db.Model):
     __tablename__ = 'pets'
 
+    # Do not forget to run db.create_all()
+   
     id = db.Column(db.Integer,
                    primary_key=True,
                    autoincrement=True)
