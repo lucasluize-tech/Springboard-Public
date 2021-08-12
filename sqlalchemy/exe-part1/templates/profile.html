@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>{{user.first_name}}</title>
+</head>
+<body>
+   <div class="container">
+    <div class="card mb-3" style="width: 18rem;">
+        <img src="{{user.image_url}}" class="card-img-top" alt="link not available">
+        <div class="card-body">
+            <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+            <p class="card-text">{{user.greet()}}</p>
+            <a href="/edit/{{user.id}}" class="btn btn-primary">Edit</a>
+            <a href="/delete/{{user.id}}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+    <a class='btn btn-success' href="/">Go to Users</a>
+   </div>
+
+</body>
+</html>

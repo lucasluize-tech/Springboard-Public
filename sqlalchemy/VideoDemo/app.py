@@ -24,7 +24,7 @@ def create_pet():
     name = request.form["name"]
     species = request.form["species"]
     hunger = request.form["hunger"]
-    hunger = int(hunger) if hunger else None
+    hunger = int(hunger) if hunger else None 
 
     new_pet  = Pet(name=name, species=species, hunger=hunger)
     db.session.add(new_pet)

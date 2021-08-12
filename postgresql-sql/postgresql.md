@@ -6,7 +6,7 @@ sudo apt install postgresql postgresql-contrib
 ```
 ## Initiate the server  
 ```
-service postgresql start
+sudo service postgresql start
 ```
 stop and status also help.
 

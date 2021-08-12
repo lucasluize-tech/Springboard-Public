@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Blogly</title>
+</head>
+<body>
+    <h1>Add New User:</h1>
+    
+    <div class="container">
+        <div class="row">
+            <form class='col-auto' action="/create-user" method="POST">
+                <input class='form-control' type="text" name='first_name' placeholder="first name" required style="margin-bottom: 10px">
+                <input class='form-control' type="text" name='last_name' placeholder="last name" required style="margin-bottom: 10px">
+                <input class='form-control' type="text" name='profile_img' placeholder="url with your image" style="margin-bottom: 10px">
+                <button class='btn btn-success' type="submit">
+                    Add User
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

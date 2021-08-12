@@ -1,6 +1,11 @@
 {
     "cSpell.ignoreWords": [
+        "autoincrement",
+        "postgresql",
+        "psycopg",
+        "tablename",
         "tbot",
+        "theo",
         "ttop"
     ],
     "python.pythonPath": "flask-intro-demo/venv/bin/python3.9"
