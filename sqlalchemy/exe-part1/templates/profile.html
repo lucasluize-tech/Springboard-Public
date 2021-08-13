@@ -16,6 +16,14 @@
         <div class="card-body">
             <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
             <p class="card-text">{{user.greet()}}</p>
+            <h6 class="card-title"><b>Posts</b>
+                <ul>
+                {% for post in posts %}
+                    <li><a href="/post/{{post.id}}">{{post.title}}</a></li>
+                {% endfor %}
+                </ul>
+            <a href="/new-post/{{user.id}}" class="btn btn-primary">Add Post</a>
+            </h6>
             <a href="/edit/{{user.id}}" class="btn btn-primary">Edit</a>
             <a href="/delete/{{user.id}}" class="btn btn-danger">Delete</a>
         </div>

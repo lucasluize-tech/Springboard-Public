@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Edit</title>
+</head>
+
+<body>
+    <h1>Editing {{post.title}}</h1>
+
+    <div class="container">
+        <div class="row">
+            <form class='col-auto' action="/edit/post-edit/{{post.id}}" method="POST">
+                <label class="form-label" for="title">Title</label>
+                <input class='form-control' type="text" name='title' placeholder="title" required style="margin-bottom: 10px" value='{{post.title}}'>
+                <label for="content" class="form-label">Content</label>
+                <textarea class='form-control' type="text-area" rows='4' cols='50' name='content' placeholder="What you want to say?"
+                    required style="margin-bottom: 10px">{{post.content}}</textarea>
+                <button class='btn btn-success' type="submit">
+                    Add Post
+                </button>
+                <a href='/{{post.user_id}}' class='btn btn-secondary' type="submit">
+                    Cancel</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
