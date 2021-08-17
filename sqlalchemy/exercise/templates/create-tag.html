@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Create a tag</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Create a Tag</h1>
+            <form class='col-auto' action="/new-tag" method="POST">
+                <label class='form-label'for="name">Name</label>
+                <input type="text" class='form-control mb-3' name='name' placeholder="type tag here">
+                <button class='btn btn-primary' type="submit">Add Tag</button>
+                <a href="/tags" class="btn btn-danger">Cancel</a>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

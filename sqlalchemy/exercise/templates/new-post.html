@@ -22,6 +22,11 @@
                     <label for="content" class="form-label">Content</label>
                     <textarea class='form-control' type="text-area" rows='4' cols = '50' name='content' placeholder="What you want to say?" required
                         style="margin-bottom: 10px"></textarea>
+                    <p><b>Tags:</b></p>
+                    {% for tag in tags %}
+                    <label for="tag">{{tag.name}}</label>
+                        <input type="checkbox" class='mb-3' name="tag" value='{{tag.name}}'><br>
+                    {% endfor %}
                     <button class='btn btn-success' type="submit">
                         Add Post
                     </button>

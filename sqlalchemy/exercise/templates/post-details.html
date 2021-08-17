@@ -15,7 +15,14 @@
     <p>
         {{post.content}}
     </p>
-    <p><i>By {{user.first_name}} {{user.last_name}}</i></p>
+    <p><i>By {{user.first_name}} {{user.last_name}} on {{post.created_at}}</i></p>
+    <p>
+        <b>Tags:
+            {% for tag in post.tags %}
+                <div class="badge bg-primary">{{tag.name}}</div>
+            {% endfor %}
+        </b>
+    </p>
     <a href="/{{user.id}}" class="btn btn-secondary">Cancel</a>
     <a href="/edit/post/{{post.id}}" class="btn btn-primary">Edit</a>
     <a href="/delete/post/{{post.id}}" class="btn btn-danger">Delete</a>

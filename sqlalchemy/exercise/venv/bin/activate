@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/lucas/Documents/Springboard/Springboard-Public/sqlalchemy/exe-part1/venv"
+VIRTUAL_ENV="/home/lucas/Documents/Springboard/Springboard-Public/sqlalchemy/exercise/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
