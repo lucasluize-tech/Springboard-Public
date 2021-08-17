@@ -15,3 +15,5 @@ sqlalchemy/VideoDemo/venv
 sqlalchemy/VideoDemo/__pycache__
 sqlalchemy/exercise/venv
 sqlalchemu/exercise/__pychace__
+flask-wtforms-demo/VideoDemo/venv
+flask-wtforms-demo/VideoDemo/__pycache__
