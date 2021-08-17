@@ -13,5 +13,5 @@ sqlalchemy/venv/
 sqlalchemy/__pycache__
 sqlalchemy/VideoDemo/venv
 sqlalchemy/VideoDemo/__pycache__
-sqlalchemy/exe-part1/venv
-sqlalchemu/exe-part1/__pychace__
+sqlalchemy/exercise/venv
+sqlalchemu/exercise/__pychace__
