@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Add Pet</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justfy-content-center">
+            <h1>Add new Pet</h1>
+            <form method="POST">
+                {{form.hidden_tag()}}
+                {% for field in form if field.widget.input_type != 'hidden' and field.widget.input_type !="checkbox" %}
+                <div class='col-md-8 form-group mb-3'>
+                    {{field.label}}
+                    {{field(class_='form-control')}}
+                
+                    {% for err in field.error %}
+                    <small>
+                        {{err}}
+                    </small>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+                <button type='submit' class='btn btn-success btn-lg'>Submit Pet</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

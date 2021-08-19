@@ -8,5 +8,9 @@
         "theo",
         "ttop"
     ],
-    "python.pythonPath": "flask-intro-demo/venv/bin/python3.9"
+    "python.pythonPath": "flask-intro-demo/venv/bin/python3.9",
+    "cSpell.words": [
+        "jsonify"
+    ],
+    "python.formatting.provider": "black"
 }
