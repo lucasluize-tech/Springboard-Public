@@ -1,0 +1,4 @@
+1 - On my JavaScript file I get this error , lexical declaration.
+    that I am accessing my variable before initialization
+    
+        - Still don't know the fix.
