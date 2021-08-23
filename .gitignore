@@ -19,3 +19,9 @@ flask-wtforms-demo/VideoDemo/venv
 flask-wtforms-demo/VideoDemo/__pycache__
 adoption-app/venv
 adoption-app/__pycache__
+flask-apis/flask-rest-json-api-demo/venv
+flask-apis/flask-rest-json-api-demo/__pycache__
+flask-apis/VideoCode/venv
+flask-apis/VideoCode/__pycache__
+flask-apis/learning/exercise/venv
+flask-apis/learning/exercise/__pycache__

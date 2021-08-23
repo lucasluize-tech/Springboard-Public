@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Cupcakes</title>
+</head>
+<body>
+    <h1> Cupcakes</h1>
+    <ul>
+    </ul>
+    <form method="POST">
+        <div class="mb3">
+            <label class='form-label' for="flavor">Flavor
+                <input id='flavor' type="text" class="form-control" name="flavor" placeholder="Flavor name" required>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class='form-label' for="size">Size
+                <input type="text" id='size' class="form-control" name="size" placeholder="small - medium - large" required>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class='form-label' class="form-control" for="rating">Rating
+                <input id='rating' type="text" class="form-control" name="rating" placeholder="rating" required>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class='form-label' for="image">URL Image:
+                <input type="text" id='image' class="form-control" name="image" placeholder="image url">
+            </label>
+        </div>
+        <button class ='btn btn-success btn-lg mb-3' type='submit'>CREATE!</button>
+    </form>
+    
+    <script src="../static/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
