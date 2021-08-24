@@ -9,37 +9,39 @@
 
     <title>Cupcakes</title>
 </head>
-<body>
+<body class='container'>
     <h1> Cupcakes</h1>
-    <ul>
-    </ul>
-    <form method="POST">
-        <div class="mb3">
-            <label class='form-label' for="flavor">Flavor
-                <input id='flavor' type="text" class="form-control" name="flavor" placeholder="Flavor name" required>
-            </label>
-        </div>
-        <div class="mb-3">
-            <label class='form-label' for="size">Size
-                <input type="text" id='size' class="form-control" name="size" placeholder="small - medium - large" required>
-            </label>
-        </div>
-        <div class="mb-3">
-            <label class='form-label' class="form-control" for="rating">Rating
-                <input id='rating' type="text" class="form-control" name="rating" placeholder="rating" required>
-            </label>
-        </div>
-        <div class="mb-3">
-            <label class='form-label' for="image">URL Image:
-                <input type="text" id='image' class="form-control" name="image" placeholder="image url">
-            </label>
-        </div>
-        <button class ='btn btn-success btn-lg mb-3' type='submit'>CREATE!</button>
-    </form>
+    <div class="row">
+        <ul class="col">
+        </ul>
+        <form class="col" method="POST">
+            <div class="mb3">
+                <label class='form-label' for="flavor">Flavor
+                    <input id='flavor' type="text" class="form-control" name="flavor" placeholder="Flavor name" required>
+                </label>
+            </div>
+            <div class="mb-3">
+                <label class='form-label' for="size">Size
+                    <input type="text" id='size' class="form-control" name="size" placeholder="small - medium - large" required>
+                </label>
+            </div>
+            <div class="mb-3">
+                <label class='form-label' class="form-control" for="rating">Rating
+                    <input id='rating' type="text" class="form-control" name="rating" placeholder="rating" required>
+                </label>
+            </div>
+            <div class="mb-3">
+                <label class='form-label' for="image">URL Image:
+                    <input type="text" id='image' class="form-control" name="image" placeholder="image url">
+                </label>
+            </div>
+            <button class ='btn btn-success btn-lg mb-3' type='submit'>CREATE!</button>
+        </form>
+    </div>
     
-    <script src="../static/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/app.js"></script>
 
 </body>
 </html>

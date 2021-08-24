@@ -73,4 +73,4 @@ def update_user(id):
 
 ## Testing API:
 
-We'll be testing JSON reponses using .json() instead of .data()
+We'll be testing JSON responses using .json() instead of .data()
