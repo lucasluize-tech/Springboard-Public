@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
-        "jsonify"
-    ]
+        "bcrypt",
+        "jsonify",
+        "ondelete",
+        "scrypt"
+    ],
+    "git.ignoreLimitWarning": true
 }

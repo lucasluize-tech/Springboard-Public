@@ -25,3 +25,6 @@ flask-apis/VideoCode/venv
 flask-apis/VideoCode/__pycache__
 flask-apis/learning/exercise/flask-cupcakes/venv
 flask-apis/learning/exercise/flask-cupcakes/__pycache__
+flask-hashing/learning/exercise/venv
+flask-hashing/learning/exercise/__pycache__
+flask-hashing/learning/exercise/solutions/

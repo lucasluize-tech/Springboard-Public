@@ -41,7 +41,7 @@ On the Bash shell , we can createdb "name" or dropbd "name" to create and remove
 
 # Dumping data from a database to new db.
 ```
-$ pg_dum -C -c -O movies_examples > backup.sql
+$ pg_dump -C -c -O movies_examples > backup.sql
 ```
 
 
