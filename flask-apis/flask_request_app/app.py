@@ -9,7 +9,7 @@ app = Flask(__name__)
 def request_coords(location):
     """Return {lat,lng} from MapQuest for given location."""
 
-    key = '4WiuDGgyNC6lAp04txicEbLMUf53z5O0'
+    key = #key here
     url = f"{API_BASE_URL}/address?key={key}&location={location}"
 
     response = requests.get(url)
